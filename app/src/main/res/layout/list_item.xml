@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/profile_img_size"
+        android:layout_height="@dimen/profile_img_size"
+        android:src="@mipmap/ic_launcher_round"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msg_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hey buddy! this is for testing puspose "
+            android:maxWidth="156dp"
+            android:paddingBottom="2dp"
+            android:textSize="@dimen/msg_text_size" />
+
+        <TextView
+            android:id="@+id/msg_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:55 PM"
+            android:textSize="@dimen/time_size"
+            android:padding="2dp"
+            android:background="@color/primary_light"/>
+
+    </LinearLayout>
+
+</LinearLayout>

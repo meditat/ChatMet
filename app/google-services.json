@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "999549857744",
+    "firebase_url": "https://chatmet-67aeb.firebaseio.com",
+    "project_id": "chatmet-67aeb",
+    "storage_bucket": "chatmet-67aeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999549857744:android:15cdc73365fd90b6",
+        "android_client_info": {
+          "package_name": "in.medit.codemed.chatmet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999549857744-30agbq2laia4tfj94pagrnds98sbmo3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.medit.codemed.chatmet",
+            "certificate_hash": "3406592440aefeddb4982057f1047dcb4bae33b4"
+          }
+        },
+        {
+          "client_id": "999549857744-0spusvink1h2vl0t9g6ijeqq48c49ale.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDEhjwVtuRAfHAzVDoXuyFG0fWxTC12nQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999549857744-0spusvink1h2vl0t9g6ijeqq48c49ale.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
