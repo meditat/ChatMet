@@ -36,18 +36,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
 
-
-        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            // Start sign in/sign up activity
-            startActivityForResult(
-                    AuthUI.getInstance()
-                            .createSignInIntentBuilder()
-                            .build(),
-                    RC_SIGN_IN
-            );
-        } else {
-            // User is already signed in. Therefore, display
-            // a welcome Toast
             Toast.makeText(this,
                     "Welcome " + FirebaseAuth.getInstance()
                             .getCurrentUser()
@@ -55,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG)
                     .show();
 
-            // Load chat room contents
             displayChatMessages();
-        }
     }
 
 
@@ -79,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 Picasso.get().load(model.getMessageUser()).into(messageUser);
 
                 // Format the date before showing it
-                messageTime.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)",
+                messageTime.setText(DateFormat.format("dd-MM (HH:mm)",
                         model.getMessageTime()));
             }
         };
@@ -103,11 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 displayChatMessages();
             } else {
                 Toast.makeText(this,
-                        "We couldn't sign you in. Please try again later.",
+                        "Please try again later.",
                         Toast.LENGTH_LONG)
                         .show();
 
-                // Close the app
                 finish();
             }
         }
