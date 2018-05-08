@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
 
-            Toast.makeText(this,
-                    "Welcome " + FirebaseAuth.getInstance()
-                            .getCurrentUser()
-                            .getDisplayName(),
-                    Toast.LENGTH_LONG)
-                    .show();
+        Toast.makeText(this,
+                "Welcome " + FirebaseAuth.getInstance()
+                        .getCurrentUser()
+                        .getDisplayName(),
+                Toast.LENGTH_LONG)
+                .show();
 
-            displayChatMessages();
+        displayChatMessages();
     }
 
 
@@ -56,17 +57,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void populateView(View v, ChatMessages model, int position) {
                 // Get references to the views of message.xml
-                TextView messageText =  v.findViewById(R.id.msg_view);
-                CircleImageView messageUser =  v.findViewById(R.id.profile_image);
-                TextView messageTime =  v.findViewById(R.id.msg_post_time);
+
+                TextView messageText = v.findViewById(R.id.msg_view);
+                CircleImageView messageUser = v.findViewById(R.id.profile_image);
+                TextView messageTime = v.findViewById(R.id.msg_post_time);
 
                 // Set their text
                 messageText.setText(model.getMessageText());
                 Picasso.get().load(model.getMessageUser()).into(messageUser);
 
                 // Format the date before showing it
-                messageTime.setText(DateFormat.format("dd-MM (HH:mm)",
+                messageTime.setText(DateFormat.format("dd-MM(HH:mm)",
                         model.getMessageTime()));
+
             }
         };
 
