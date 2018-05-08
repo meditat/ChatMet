@@ -9,9 +9,11 @@
         android:id="@+id/profile_image"
         android:layout_width="@dimen/profile_img_size"
         android:layout_height="@dimen/profile_img_size"
+        android:clickable="true"
         android:src="@mipmap/ic_launcher_round"
         app:civ_border_color="@color/colorPrimary"
-        app:civ_border_width="2dp" />
+        app:civ_border_width="2dp"
+        android:focusable="true" />
 
     <LinearLayout
         android:layout_width="wrap_content"

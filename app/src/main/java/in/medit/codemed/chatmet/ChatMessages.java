@@ -7,10 +7,21 @@ public class ChatMessages {
     private String messageText;
     private String messageUser;
     private long messageTime;
+    private String userName;
 
-    public ChatMessages(String messageText, String messageUser) {
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public ChatMessages(String messageText, String messageUser, String userName) {
         this.messageText = messageText;
         this.messageUser = messageUser;
+        this.userName = userName;
+
 
         // Initialize to current time
         messageTime = new Date().getTime();
